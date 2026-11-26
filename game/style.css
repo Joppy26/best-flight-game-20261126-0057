@@ -1,0 +1,40 @@
+/* Meridian Courier: page chrome and menu panels. No network assets. */
+html, body { margin: 0; padding: 0; background: #0b1622; height: 100%; overflow: hidden; font-family: "Segoe UI", Verdana, sans-serif; }
+#stage { position: relative; width: 100vw; height: 100vh; }
+#game { display: block; width: 100vw; height: 100vh; }
+#panel {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 620px; max-width: 92vw; text-align: center; color: #eaf4ff;
+  background: rgba(8, 22, 38, 0.82); border: 1px solid #3f7fb8; border-radius: 14px;
+  padding: 22px 26px 18px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+}
+#panel h1 { margin: 0; font-size: 34px; letter-spacing: 5px; color: #ffd34d; text-shadow: 0 2px 0 #7a4d00; }
+#panel .tag { margin: 4px 0 14px; color: #9fd0ff; letter-spacing: 1px; }
+.missions { display: flex; gap: 10px; justify-content: center; }
+.mission {
+  flex: 1; cursor: pointer; color: #eaf4ff; background: #12324f; border: 1px solid #3f7fb8;
+  border-radius: 9px; padding: 10px 6px; font-size: 13px; font-weight: bold; line-height: 1.5;
+}
+.mission span { font-weight: normal; font-size: 11px; color: #b8d9f5; }
+.mission.picked { background: #1d5a8a; border-color: #ffd34d; box-shadow: 0 0 0 2px rgba(255, 211, 77, 0.35); }
+.controls { font-size: 13px; line-height: 1.7; color: #d6e9fa; margin: 14px 0 6px; }
+.brief { font-size: 13px; color: #ffe9a8; min-height: 34px; margin: 6px 0 12px; }
+#flyBtn, #againBtn {
+  cursor: pointer; font-size: 18px; font-weight: bold; letter-spacing: 3px; color: #10233a;
+  background: #ffd34d; border: none; border-radius: 9px; padding: 12px 34px;
+}
+#flyBtn:hover, #againBtn:hover { background: #ffe082; }
+.hint { font-size: 11px; color: #8fb4d4; margin: 12px 0 0; }
+#toast {
+  position: absolute; left: 50%; top: 16%; transform: translateX(-50%);
+  font-size: 26px; font-weight: bold; letter-spacing: 2px; color: #ffd34d;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8); pointer-events: none; opacity: 0; transition: opacity 0.25s;
+}
+#endcard {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 480px; max-width: 92vw; text-align: center; color: #eaf4ff;
+  background: rgba(8, 22, 38, 0.88); border: 1px solid #3f7fb8; border-radius: 14px; padding: 24px;
+}
+#endcard h2 { margin: 0 0 8px; color: #ffd34d; letter-spacing: 3px; }
+#endcard p { font-size: 14px; line-height: 1.6; }
+.hidden { display: none; }

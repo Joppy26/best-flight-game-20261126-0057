@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Courier — Skyline Run</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="panel">
+    <h1>MERIDIAN COURIER</h1>
+    <p class="tag">Skyline Run &middot; a bush-mail run over the Meridian valley</p>
+    <div class="missions">
+      <button data-mission="rings" class="mission picked">1 &middot; RING RUN<br><span>Fly all 8 sky rings</span></button>
+      <button data-mission="landing" class="mission">2 &middot; VALLEY LANDING<br><span>Touch down on runway 09</span></button>
+      <button data-mission="canyon" class="mission">3 &middot; CANYON SLALOM<br><span>Thread the red gates low</span></button>
+    </div>
+    <p class="controls">Fly: <b>&larr; &rarr;</b> bank &amp; turn &nbsp; <b>&uarr; &darr;</b> climb / dive &nbsp; <b>W / S</b> throttle &nbsp; <b>Mouse</b> steer &nbsp; <b>Space</b> airbrake &nbsp; <b>P</b> pause &nbsp; <b>R</b> restart &nbsp; <b>M</b> sound</p>
+    <p class="brief" id="brief">Ring Run: thread every glowing ring before your fuel runs dry. Smooth turns beat hard banks, and full throttle burns fuel twice as fast.</p>
+    <button id="flyBtn">TAKE OFF</button>
+    <p class="hint">Watch fuel and damage. A hard touchdown or a hillside ends the sortie.</p>
+  </div>
+  <div id="toast"></div>
+  <div id="endcard" class="hidden">
+    <h2 id="endTitle">MISSION COMPLETE</h2>
+    <p id="endText"></p>
+    <p id="endStats"></p>
+    <button id="againBtn">FLY AGAIN</button>
+  </div>
+</div>
+<script src="audio.js"></script>
+<script src="physics.js"></script>
+<script src="terrain.js"></script>
+<script src="aircraft.js"></script>
+<script src="missions.js"></script>
+<script src="hud.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
